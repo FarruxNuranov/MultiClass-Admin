@@ -1,0 +1,209 @@
+/* src/pages/DashboardPages/AttendancePage/AttendancePage.module.scss */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+}
+
+/* ================== Статистика ================== */
+
+/* 🔹 Статистика */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border: 1px solid var(--colors-border-border-secondary);
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  height: 106px;
+  min-width: 320px;
+  background: var(--colors-background-bg-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.label {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-tertiary-600);
+}
+
+.value {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 127%;
+  color: var(--colors-text-text-primary-900);
+}
+/* ================== Фильтры ================== */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+
+  .right {
+    display: flex;
+    gap: 12px;
+    margin-left: auto; // уводим вправо
+  }
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 200px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 12px;
+  padding-right: 32px;
+  height: 40px;
+  font-size: 14px;
+  background: #fff
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%236b7280' stroke-width='2' viewBox='0 0 24 24'><path d='M6 9l6 6 6-6'/></svg>")
+    no-repeat right 12px center;
+  background-size: 16px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-color: #6d28d9;
+  }
+}
+
+.calendarBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 14px;
+  height: 40px;
+  font-size: 14px;
+  background: #fff;
+  color: #374151;
+  cursor: pointer;
+
+  &:hover {
+    background: #f9fafb;
+  }
+}
+
+.exportBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 14px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #fff;
+  color: #374151;
+  cursor: pointer;
+
+  &:hover {
+    background: #f9fafb;
+  }
+}
+/* ================== Таблица ================== */
+.table {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+  align-items: center;
+  border-bottom: 1px solid var(--colors-border-border-secondary);
+  padding: 16px 24px;
+  height: 72px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  color: var(--colors-text-text-quaternary-500);
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.head {
+  border-bottom: 1px solid var(--colors-border-border-secondary);
+  padding: 12px 24px;
+  height: 44px;
+  height: 44px;
+  background: var(--colors-background-bg-primary);
+}
+
+.className {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* --- Badge (проценты) --- */
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.yellow {
+  background: #fef9c3;
+  color: #ca8a04;
+}
+
+.red {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* --- Аватары --- */
+.avatars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px #e5e7eb;
+  }
+
+  .count {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-left: 4px;
+  }
+}

@@ -1,0 +1,343 @@
+.subjects {
+  background: var(--colors-background-bg-primary);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh; // 🔹 растягиваем на всю высоту экрана
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 40px;
+
+    h2 {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 156%;
+      color: var(--colors-text-text-primary-900);
+    }
+  }
+
+  .addBtn {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    width: 140px;
+    height: 40px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--colors-text-text-white);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 2px 0 var(--colors-effects-shadows-shadow-xs),
+      inset 0 -2px 0 0 var(--colors-effects-shadows-shadow-skeumorphic-inner),
+      inset 0 0 0 1px
+        var(--colors-effects-shadows-shadow-skeumorphic-inner-border);
+    background: var(--colors-background-bg-brand-solid);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: var(--colors-brand-500);
+    }
+  }
+
+  .table {
+    border: 1px solid var(--colors-border-border-secondary);
+    border-radius: 12px;
+    width: 100%;
+    flex: 1; // 🔹 таблица занимает всё оставшееся место
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    // кастомный скролл
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--colors-border-border-secondary);
+      border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--colors-text-text-quaternary-500);
+    }
+  }
+
+  .head {
+    background: var(--colors-background-bg-secondary-alt);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--colors-text-text-secondary-700);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .tableName {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 150%;
+    color: var(--colors-text-text-quaternary-500);
+  }
+
+  .sizeRow {
+    border-bottom: 1px solid var(--colors-border-border-secondary);
+    padding: 16px 24px;
+    width: 100%;
+    height: 72px;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--colors-border-border-secondary);
+    font-size: 14px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    span {
+      color: var(--colors-text-text-primary-900);
+    }
+  }
+
+  .head {
+    background: var(--colors-background-bg-primary);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--colors-text-text-secondary-700);
+  }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px; // увеличим размер иконок
+      color: var(--colors-text-text-quaternary-500);
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--colors-text-text-primary-900);
+      }
+    }
+  }
+}
+/* Уже были таблица и кнопки — добавляем модальное окно */
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--colors-background-bg-primary);
+  border-radius: 16px;
+  width: 400px;
+  max-width: 400px;
+  padding: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Иконка сверху */
+.iconBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .folderIcon {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--colors-text-text-primary-900);
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--colors-text-text-quaternary-500);
+
+  &:hover {
+    color: var(--colors-text-text-secondary-700);
+  }
+}
+
+label {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-secondary-700);
+}
+
+input {
+  border: 1px solid var(--colors-border-border-primary);
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 352px;
+  height: 44px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+
+  &:focus {
+    border-color: var(--colors-brand-600);
+    box-shadow: 0 0 0 2px rgba(127, 86, 217, 0.2);
+  }
+}
+
+/* Нижние кнопки */
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+
+  .cancelBtn {
+    background: var(--colors-background-bg-primary);
+    border: 1px solid var(--colors-border-border-secondary);
+    color: var(--colors-text-text-primary-900);
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background: var(--colors-background-bg-secondary-alt);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+  }
+
+  .saveBtn {
+    background: var(--colors-brand-600);
+    color: var(--colors-text-text-white);
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    &:hover {
+      background: var(--colors-brand-500);
+    }
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #6b7280;
+
+  &:hover {
+    color: #111827;
+  }
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+
+  .folderIcon {
+    font-size: 40px;
+    color: var(--colors-brand-600);
+  }
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+
+  .cancelBtn {
+    border: 1px solid var(--colors-border-border-primary);
+    border-radius: 8px;
+    padding: 10px 16px;
+    width: 170px;
+    height: 44px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--colors-text-text-secondary-700);
+    background: var(--colors-background-bg-primary);
+
+    &:hover {
+      background: var(--colors-background-bg-primary);
+    }
+  }
+
+  .saveBtn {
+    background: var(--colors-background-bg-brand-solid);
+    border-radius: 8px;
+    padding: 10px 16px;
+    width: 170px;
+    height: 44px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--colors-text-text-white);
+
+    &:hover {
+      background: #6d28d9;
+    }
+  }
+}

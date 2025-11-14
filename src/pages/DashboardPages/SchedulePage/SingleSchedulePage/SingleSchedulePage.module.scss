@@ -1,0 +1,321 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+}
+
+/* 🔹 Верхняя панель */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  background: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+
+.weekInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f9fafb; /* светлый фон */
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 15px;
+  color: #374151; /* серый текст */
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+
+  strong {
+    color: var(--colors-text-text-brand-secondary-700); /* синий — выделение номера недели */
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  span {
+    color: #6b7280; /* светло-серый для диапазона дат */
+    font-size: 14px;
+  }
+
+  &:hover {
+    background: #eef2ff;
+    border-color: #c7d2fe;
+  }
+}
+
+/* 🔹 Левая часть с датой */
+.dateInfo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  .weekBadge {
+    background: #f3f0ff;
+    border-radius: 10px;
+    padding: 10px 12px;
+    text-align: center;
+    min-width: 48px;
+
+    span {
+      display: block;
+      font-size: 12px;
+      color: #7c3aed;
+      text-transform: uppercase;
+    }
+
+    b {
+      font-size: 18px;
+      color: #1f2937;
+    }
+  }
+
+  .monthTitle {
+    font-weight: 600;
+    font-size: 18px;
+    color: #111827;
+  }
+
+  .weekRange {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 2px;
+  }
+
+  .calendarControls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 16px;
+
+    button {
+      border: 1px solid #e5e7eb;
+      background: white;
+      border-radius: 8px;
+      padding: 6px 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #374151;
+      transition: all 0.15s ease;
+
+      &:hover {
+        background: #f9fafb;
+      }
+
+      &:active {
+        background: #f3f4f6;
+      }
+    }
+
+    /* 🔹 “Bugun” */
+    button:nth-child(2) {
+      background: #7c3aed;
+      color: white;
+      border-color: transparent;
+
+      &:hover {
+        background: #6d28d9;
+      }
+    }
+  }
+}
+
+/* 🔹 Правая часть с кнопками */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 8px;
+    padding: 9px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .swapBtn {
+    border: 1px solid #e5e7eb;
+    background: white;
+
+    &:hover {
+      background: #f3f4f6;
+    }
+  }
+
+  .refreshBtn {
+    background: #7c3aed;
+    color: white;
+    border: none;
+
+    &:hover {
+      background: #6d28d9;
+    }
+  }
+}
+
+/* 🔹 Календарь */
+.calendarWrapper {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  padding: 8px;
+
+  :global(.fc) {
+    font-family: "Inter", sans-serif;
+  }
+
+  /* 🔹 Toolbar FullCalendar */
+  :global(.fc-toolbar) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+
+    border-radius: 10px;
+    padding: 10px 16px;
+  }
+
+  :global(.fc-toolbar-title) {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  :global(.fc-button) {
+    background: #f5f3ff;
+    border: 1px solid #ddd6fe;
+    border-radius: 10px;
+    color: #5b21b6;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 7px 14px;
+    margin: 0 3px;
+    box-shadow: 0 1px 3px rgba(91, 33, 182, 0.08);
+    transition: all 0.2s ease-in-out;
+    backdrop-filter: blur(6px);
+
+    &:hover {
+      background: #ede9fe;
+      color: #4c1d95;
+      border-color: #c4b5fd;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 6px rgba(124, 58, 237, 0.15);
+    }
+
+    &.fc-button-active,
+    &:active {
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      color: #fff;
+      border-color: #6d28d9;
+      box-shadow: 0 2px 6px rgba(109, 40, 217, 0.25);
+      transform: translateY(0);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.4);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      background: #f3f4f6;
+      color: #9ca3af;
+      border-color: #e5e7eb;
+      box-shadow: none;
+    }
+  }
+
+  /* 🔹 Календарная сетка */
+  :global(.fc-timegrid-slot-label) {
+    color: #6b7280;
+    font-size: 12px;
+  }
+  :global(.fc-timegrid-slot) {
+    color: #6b7280;
+    font-size: 12px;
+    height: 100px;
+  }
+
+  :global(.fc-col-header-cell-cushion) {
+    font-size: 13px;
+    font-weight: 600;
+    height: 50px;
+    color: #1f2937;
+  }
+
+  :global(.fc-day-today) {
+    background: #f5f3ff !important;
+  }
+
+  :global(.fc-timegrid-now-indicator-line) {
+    border-color: #ef4444;
+  }
+
+  :global(.fc-event) {
+    border: none;
+    border-radius: 10px;
+    background: #ede9fe;
+    color: #1f2937;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.15s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+/* 🔹 Уроки */
+.eventBox {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 6px 8px;
+
+  .subject {
+    font-weight: 600;
+    font-size: 14px;
+    color: #111827;
+  }
+
+  .teacher {
+    font-size: 12px;
+    color: #6b7280;
+  }
+}
+
+:global(.fc-timegrid-col.fc-day-sun),
+:global(.fc-daygrid-day.fc-day-sun) {
+  background-color: #ffeaea !important; /* мягкий красный */
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 0.08) 0,
+    rgba(255, 0, 0, 0.08) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+}
+.weekHighlight {
+  animation: weekFade 0.8s ease-in-out;
+}
+
+@keyframes weekFade {
+  0% {
+    background-color: rgba(124, 58, 237, 0.08);
+  }
+  100% {
+    background-color: transparent;
+  }
+}

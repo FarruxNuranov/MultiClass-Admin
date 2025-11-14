@@ -1,0 +1,138 @@
+.page {
+    min-height: 100vh;
+}
+
+.header {
+  position: relative;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: var(--colors-background-bg-primary);
+
+  h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--colors-text-text-primary-900);
+  }
+}
+
+.backIcon {
+  position: absolute;
+  left: 16px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.backIcon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+.page {
+  padding: 16px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+  }
+
+  .backIcon {
+    font-size: 22px;
+    cursor: pointer;
+  }
+}
+
+.subjectList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.subjectCard {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  .subjectHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .averageBox {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: #f3f3f8;
+      border-radius: 8px;
+      padding: 2px 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+
+      svg {
+        color: #4caf50;
+      }
+    }
+  }
+
+  .gradesRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .grade {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid #ddd;
+  }
+
+  .green {
+    color: #2e7d32;
+    border-color: #81c784;
+    background: #e8f5e9;
+  }
+
+  .yellow {
+    color: #f57f17;
+    border-color: #fbc02d;
+    background: #fffde7;
+  }
+
+  .red {
+    color: #c62828;
+    border-color: #ef9a9a;
+    background: #ffebee;
+  }
+}

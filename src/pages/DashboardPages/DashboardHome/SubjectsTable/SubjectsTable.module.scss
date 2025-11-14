@@ -1,0 +1,101 @@
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(17, 24, 39, 0.04);
+  overflow: hidden;
+  margin-top: 24px;
+}
+
+.header {
+  padding: 14px 16px 8px 16px;
+
+  h3 {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--colors-text-text-primary-900);
+  }
+}
+
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead tr {
+    background: #fff;
+  }
+
+  th,
+  td {
+    padding: 14px 16px; /* визуально ~52px высота строки */
+    border-bottom: 1px solid #f3f4f6;
+    text-align: left;
+    border-bottom: 1px solid var(--colors-border-border-secondary);
+    padding: 16px 24px;
+    width: 540px;
+    height: 72px;
+  }
+
+  th {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 150%;
+    color: var(--colors-text-text-quaternary-500);
+  }
+
+  td {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--colors-text-text-primary-900);
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  tbody tr:hover td {
+    background: #fafafa; /* очень лёгкий hover */
+    transition: background 0.15s ease;
+  }
+}
+
+/* аккуратная иконка сортировки */
+.sortable {
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  padding-right: 18px; /* место под стрелку */
+}
+
+.chev {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid #9ca3af;
+  border-bottom: 1.5px solid #9ca3af;
+  transform: translateY(-60%) rotate(45deg);
+  opacity: 0.6;
+}
+
+.asc {
+  transform: translateY(-40%) rotate(-135deg);
+  opacity: 1;
+}
+
+.desc {
+  transform: translateY(-60%) rotate(45deg);
+  opacity: 1;
+}

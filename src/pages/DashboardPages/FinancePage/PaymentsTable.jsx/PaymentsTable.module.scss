@@ -1,0 +1,115 @@
+.wrapper {
+  border: 1px solid var(--colors-border-border-secondary);
+  border-radius: 16px;
+  background: var(--colors-background-bg-primary);
+  padding: 20px;
+}
+
+/* === Верхняя панель (название, поиск, кнопки) === */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+
+  h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--colors-text-text-primary-900);
+  }
+
+  .search {
+    width: 220px;
+  }
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* === Фильтры и селекты === */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ✅ Сегмент (фильтр статусов) — точь-в-точь как в макете */
+.statusSegment {
+  border: 1px solid var(--colors-border-border-secondary);
+  border-radius: 12px;
+  background: var(--colors-background-bg-secondary-alt);
+  padding: 4px;
+  height: 40px; /* 👈 Точная высота фильтр-бокса */
+  display: inline-flex;
+  align-items: center;
+
+  /* Бегунок */
+  :global(.ant-segmented-thumb) {
+    background: var(--colors-background-bg-primary);
+    border: 1px solid var(--colors-border-border-secondary);
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
+    height: 32px; /* 40 - 8 (по 4px сверху/снизу) */
+    top: 4px;
+  }
+
+  /* Элементы */
+  :global(.ant-segmented-item) {
+    border-radius: 8px;
+    padding: 4px 18px;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--colors-text-text-quaternary-500);
+    transition: color 0.15s ease;
+  }
+
+  :global(.ant-segmented-item-selected) {
+    color: var(--colors-text-text-primary-900);
+  }
+
+  /* Группа */
+  :global(.ant-segmented-group) {
+    gap: 0;
+  }
+}
+
+/* === Таблица и контент === */
+.studentCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.name {
+  font-weight: 500;
+  color: var(--colors-text-text-primary-900);
+}
+
+.phone {
+  font-size: 13px;
+  color: var(--colors-text-text-quaternary-500);
+}
+
+.statusTag {
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.typeTag {
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+}

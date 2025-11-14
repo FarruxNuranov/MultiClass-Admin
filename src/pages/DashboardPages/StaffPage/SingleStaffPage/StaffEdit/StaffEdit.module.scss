@@ -1,0 +1,357 @@
+.editWrapper {
+  display: flex;
+  flex-direction: column;
+  
+  padding: 16px;
+}
+
+/* 🔹 Верхний бокс */
+.topBox {
+  display: flex;
+  gap: 32px;
+  padding: 24px;
+  background: var(--colors-background-bg-primary);
+  border-bottom: 1px solid var(--colors-border-border-secondary);
+}
+
+.avatarIconBot {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--colors-background-bg-secondary-alt);
+  color: var(--colors-foreground-fg-quaternary-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.leftBoxTop {
+  flex: 1;
+  max-width: 380px;
+}
+
+.sectionTitleTop {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-secondary-700);
+}
+
+.sectionSubtitleTop {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-tertiary-600);
+}
+
+.rightBoxTop {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid var(--colors-border-border-secondary);
+  border-radius: 12px;
+  width: 720px;
+  padding: 24px;
+}
+
+.formGridTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.inputGroupTop {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--colors-text-text-secondary-700);
+  }
+
+  input {
+    border: 1px solid var(--colors-border-border-primary);
+    border-radius: 8px;
+    padding: 10px 14px;
+    width: 100%;
+    height: 44px;
+    background: var(--colors-background-bg-primary);
+    outline: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--colors-text-text-primary-900);
+
+    &:focus {
+      border-color: #8b5cf6;
+      box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+    }
+  }
+}
+
+.btnRowTop {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancelBtnTop {
+  border: 1px solid var(--colors-border-border-primary);
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 111px;
+  height: 40px;
+  background: var(--colors-background-bg-primary);
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-secondary-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saveBtnTop {
+  background: var(--colors-background-bg-brand-solid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 181px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-white);
+}
+
+/* 🔹 Нижний бокс */
+.bottomBox {
+  display: flex;
+  gap: 32px;
+  padding: 24px;
+  background: var(--colors-background-bg-primary);
+}
+
+.leftBoxBot {
+  flex: 1;
+  max-width: 380px;
+}
+
+.sectionTitleBot {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-secondary-700);
+}
+
+.sectionSubtitleBot {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-tertiary-600);
+}
+
+.rightBoxBot {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid var(--colors-border-border-secondary);
+  border-radius: 12px;
+  width: 720px;
+  padding: 24px;
+}
+
+.avatarUploadBot {
+  display: flex;
+
+  gap: 20px;
+}
+
+.avatarBot {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.uploadBoxBot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  
+  width: 100%;
+  height: 126px;
+  border-radius: 12px;
+  border: 1px solid var(--colors-border-border-secondary);
+
+  .uploadIcon {
+    color: var(--colors-text-text-brand-secondary-700);
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: var(--colors-text-text-brand-secondary-700);
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--colors-text-text-brand-secondary-700);
+  }
+
+  p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--colors-text-text-tertiary-600);
+  }
+}
+
+.formGridBot {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.inputGroupBot {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--colors-text-text-secondary-700);
+  }
+
+  input {
+    border: 1px solid var(--colors-border-border-primary);
+    border-radius: 8px;
+    padding: 10px 14px;
+    width: 100%;
+    height: 44px;
+    background: var(--colors-background-bg-primary);
+    outline: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--colors-text-text-primary-900);
+
+    &:focus {
+      border-color: #8b5cf6;
+      box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+    }
+  }
+
+  textarea {
+    resize: none;
+    padding: 10px 14px;
+    border: 1px solid var(--colors-border-border-secondary);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+
+    &:focus {
+      border-color: #8b5cf6;
+      box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+    }
+  }
+}
+
+.charCountBot {
+  font-size: 12px;
+  color: var(--colors-text-text-secondary-700);
+  margin-top: 4px;
+  display: block;
+}
+
+.btnRowBot {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+
+
+/* 🔹 Общие кнопки управления */
+.actionsRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--colors-background-bg-primary);
+ 
+}
+
+.cancelBtn {
+  border: 1px solid var(--colors-border-border-primary);
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 111px;
+  height: 40px;
+  background: var(--colors-background-bg-primary);
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-secondary-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: var(--colors-background-bg-secondary-alt);
+  }
+}
+
+.saveBtn {
+  background: var(--colors-background-bg-brand-solid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 181px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-white);
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

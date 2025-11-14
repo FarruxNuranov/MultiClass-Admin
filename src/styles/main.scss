@@ -1,0 +1,24 @@
+@import './fonts';
+@import './variables';
+
+
+body {
+    font-family: var(--font-family);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+}
+
+
+a{
+    text-decoration: none;
+}
+.ant-form-item .ant-form-item-label {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-align: left !important;
+  }

@@ -1,0 +1,113 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--colors-text-text-primary-900);
+}
+
+.dateBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f9fafb;
+  border: 1px solid var(--colors-border-border-secondary);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+
+  &:hover {
+    background: #f3f4f6;
+  }
+}
+
+.table {
+  border: 1px solid var(--colors-border-border-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 14px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.head {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+}
+
+.avg {
+  font-weight: 600;
+  color: #111827;
+}
+
+.status {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-align: center;
+
+  &.present {
+    background: #dcfce7;
+    color: #16a34a;
+  }
+
+  &.absent {
+    background: #fee2e2;
+    color: #dc2626;
+  }
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none; /* Firefox */
+
+  border: 1px solid var(--colors-border-border-primary);
+  border-radius: 6px;
+  padding: 6px 32px 6px 8px; // справа больше места под стрелку
+  font-size: 14px;
+  background: #fff
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%236b7280' stroke-width='2' viewBox='0 0 24 24'><path d='M6 9l6 6 6-6'/></svg>")
+    no-repeat right 8px center;
+  background-size: 16px;
+  cursor: pointer;
+}

@@ -1,0 +1,282 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-right: 1px solid var(--colors-border-border-secondary);
+  padding: 0px 24px;
+  width: 100%;
+
+  p {
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--colors-text-text-secondary-700);
+  }
+
+  ul {
+    margin-left: 20px;
+    list-style: disc;
+    color: var(--colors-text-text-secondary-700);
+  }
+}
+
+.sectionTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 156%;
+  color: var(--colors-text-text-primary-900);
+}
+
+.sectionSubtitle {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--colors-text-text-tertiary-600);
+  margin-top: 12px;
+}
+
+.sectionDescription {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--colors-text-text-tertiary-600);
+}
+li {
+  font-family: var(--font-family);
+  font-weight: 40;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--colors-text-text-tertiary-600);
+}
+
+.images {
+  display: flex;
+  gap: 12px;
+  max-width: 217px;
+  img {
+    width: 100%;
+  }
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  width: 100%;
+}
+
+.infoCard {
+  border-radius: 12px;
+
+  background: var(--colors-background-bg-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  height: 276px;
+
+  .infoTitle {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 156%;
+    color: var(--colors-text-text-primary-900);
+  }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .editBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--colors-background-bg-primary);
+    border: 1px solid var(--colors-border-border-primary);
+    border-radius: 8px;
+    padding: 8px 12px;
+    width: 100%;
+    height: 36px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--colors-text-text-secondary-700);
+    cursor: pointer;
+  }
+
+  .deleteBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--colors-foreground-fg-error-primary);
+    border: 1px solid var(--colors-border-border-primary);
+    background: var(--colors-background-bg-primary);
+    border-radius: 8px;
+    padding: 8px 12px;
+    width: 100%;
+    height: 36px;
+    cursor: pointer;
+  }
+
+  .infoItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .icon {
+    font-size: 18px;
+    color: var(--colors-text-text-secondary-700); // серый, как в макете
+    margin-top: 2px;
+  }
+
+  .infoclass {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 143%;
+    color: var(--colors-text-text-tertiary-600);
+  }
+
+  .infoValue {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--colors-text-text-secondary-700);
+  }
+}
+
+.materialsCard {
+  border: 1px solid var(--colors-border-border-secondary);
+  border-radius: 12px;
+  background: var(--colors-background-bg-primary);
+
+  .cardTitle {
+    padding: 12px 16px;
+    background: var(--colors-background-bg-secondary-alt);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--colors-text-text-primary-900);
+    border-bottom: 1px solid var(--colors-border-border-secondary);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fileRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--colors-border-border-secondary);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .leftMaterial {
+    display: flex;
+    
+    gap: 12px;
+  }
+
+  .fileIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  /* Цвета по типу файла */
+  .pdf {
+    background: #ef4444;
+  }
+  .docx {
+    background: #2563eb;
+  }
+  .ppt {
+    background: #f97316;
+  }
+  .xls {
+    background: #22c55e;
+  }
+  .jpg,
+  .png {
+    background: #8b5cf6;
+  }
+  .mp4 {
+    background: #3b82f6;
+  }
+  .mp3 {
+    background: #ec4899;
+  }
+  .txt {
+    background: #6b7280;
+  }
+
+  .fileInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fileName {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--colors-text-text-primary-900);
+  }
+
+  .fileSize {
+    font-size: 12px;
+    color: var(--colors-text-text-quaternary-500);
+  }
+
+  .downloadBtn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--colors-text-text-quaternary-500);
+
+    &:hover {
+      color: var(--colors-text-text-primary-900);
+    }
+  }
+}

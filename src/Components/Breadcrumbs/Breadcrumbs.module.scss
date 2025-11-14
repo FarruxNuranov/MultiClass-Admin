@@ -1,0 +1,52 @@
+.breadcrumbs {
+  font-family: var(--font-family, Arial, sans-serif);
+  font-size: 14px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    color: #374151; // серый (Tailwind gray-700)
+
+    a {
+      text-decoration: none;
+      color: #374151; // обычный серый
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #111827; // более тёмный при ховере
+      }
+    }
+
+    &::after {
+      content: "›"; // стрелка (можно заменить на "/")
+      margin-left: 8px;
+      margin-right: 8px;
+      color: #9ca3af; // светло-серый
+    }
+
+    &:last-child {
+      font-weight: 600;
+      color: #111827; // активный пункт — почти чёрный
+      background: #f9fafb; // светло-серый фон (как на скрине)
+      padding: 4px 8px;
+      border-radius: 6px;
+
+      span {
+        color: inherit;
+      }
+
+      &::after {
+        content: "";
+        margin: 0;
+      }
+    }
+  }
+}

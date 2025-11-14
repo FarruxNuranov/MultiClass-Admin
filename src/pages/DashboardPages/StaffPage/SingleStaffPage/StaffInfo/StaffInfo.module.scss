@@ -1,0 +1,214 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔹 Хэдер */
+.headerBg {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(90deg, #f9a8d4, #a78bfa, #60a5fa);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.header {
+  background: var(--colors-background-bg-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 16px 24px;
+  margin-top: -40px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 4px solid var(--colors-background-bg-primary);
+  object-fit: cover;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--colors-text-text-primary-900);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.roleBadge {
+  background: var(--component-colors-utility-success-utility-success-50);
+  color: var(--success-700);
+  font-size: 13px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.email {
+  font-size: 14px;
+  color: var(--colors-text-text-quaternary-500);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+
+  button {
+    border: 1px solid var(--colors-border-border-primary);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    background: var(--colors-background-bg-primary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    &:hover {
+      background: var(--colors-background-bg-secondary-alt);
+    }
+  }
+}
+
+.infoSection {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 32px;
+  padding: 24px;
+  background: var(--colors-background-bg-primary);
+  border-bottom: 1px solid var(--colors-border-border-secondary);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.leftInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .label {
+    font-size: 14px;
+    color: var(--colors-text-text-quaternary-500);
+  }
+
+  .value {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--colors-text-text-primary-900);
+  }
+
+  .link {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--colors-text-text-brand-secondary-700);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.rightInfo {
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--colors-text-text-primary-900);
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--colors-text-text-secondary-700);
+    margin-bottom: 12px;
+  }
+
+  .moreLink {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--colors-text-text-brand-secondary-700);
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* 🔹 Hujjatlar */
+.docsSection {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 32px;
+  padding: 24px;
+  background: var(--colors-background-bg-primary);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.docsLeft {
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+  }
+}
+
+.docsRight {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.docsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 2fr));
+  gap: 16px;
+}
+
+.docCard {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--colors-border-border-secondary);
+  background: var(--colors-background-bg-secondary-alt);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.avatarIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--colors-background-bg-secondary-alt);
+  color: var(--colors-foreground-fg-quaternary-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  border: 2px solid var(--colors-border-border-secondary);
+  flex-shrink: 0;
+}

@@ -1,0 +1,153 @@
+.loginWrapper {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #101113;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280; // серый
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #101113;
+  }
+
+  input {
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+
+    &:focus {
+      border-color: #7c3aed;
+    }
+  }
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #374151;
+}
+
+.errorBox {
+  padding: 10px;
+  background: #fee2e2; // светло-красный фон
+  color: #dc2626; // ярко-красный текст
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* src/pages/AuthPages/Login/LoginPage.module.scss */
+
+.passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 100%;
+    padding-right: 40px; // место для иконки
+  }
+}
+
+.eyeBtn {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+
+  svg {
+    font-size: 18px;
+  }
+
+  &:hover {
+    color: #111827;
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  input {
+    accent-color: #7c3aed;
+    width: 15px;
+    height: 15px; // фиолетовый чекбокс
+  }
+}
+
+.forgot {
+  color: #7c3aed;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.submitBtn {
+  width: 100%;
+  background: #7c3aed;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #6d28d9;
+  }
+}
+
+.mobileLogo {
+  display: none;
+  font-size: 22px;
+  font-weight: 700;
+  color: #7c3aed;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    display: block; // ✅ видно только на мобилке
+  }
+}

@@ -1,0 +1,70 @@
+// src/styles/_variables.scss
+
+:root {
+  --font-family: "Inter", sans-serif;
+  --colors-text-text-brand-secondary-700: #6941c6;
+  --colors-text-text-quaternary-500: #717680;
+  --colors-text-text-secondary-700: #414651;
+  --colors-text-text-primary-900: #181d27;
+  --colors-background-bg-brand-solid: #7f56d9;
+  --colors-text-text-white: #ffff;
+  --colors-border-border-primary: #d5d7da;
+  --colors-background-bg-primary: #ffff;
+  --colors-border-border-secondary: #e9eaeb;
+  --colors-background-bg-secondary-alt: #f9f9f9;
+  --colors-foreground-fg-quaternary-400: #a4a7ae;
+  --component-colors-utility-success-utility-success-50: #abefc6;
+  --component-colors-utility-success-utility-success-700: #abefc6;
+  --success-700: #067647;
+  --success-200: #abefc6;
+  --component-colors-utility-blue-utility-blue-700: #175cd3;
+  --component-colors-utility-blue-utility-blue-50: #b2ddff;
+  --component-colors-utility-blue-utility-blue-200:#EFF8FF;
+  --blue-700:#175CD3;
+  --colors-foreground-fg-error-primary:#D92D20;
+  --colors-text-text-tertiary-600:#535862;
+  --colors-text-text-success-primary-600:#079455;
+  --colors-background-bg-brand-primary:#F9F5FF;
+  --component-colors-utility-error-utility-error-50: #FEF3F2;
+--error-600: #D92D20;
+--colors-text-text-placeholder-subtle: #D5D7DA;
+--colors-brand-600:#7F56D9;
+--colors-brand-500:#9E77ED;
+--base-white:#ffffff;
+}
+
+/* Dark theme overrides */
+:root[data-theme="dark"] {
+  --colors-text-text-brand-secondary-700: #9e8cf2;
+  --colors-text-text-quaternary-500: #9aa3af;
+  --colors-text-text-secondary-700: #c2c7d0;
+  --colors-text-text-primary-900: #e5e7eb;
+  --colors-background-bg-brand-solid: #6841c6;
+  --colors-text-text-white: #ffffff;
+  --colors-border-border-primary: #2f3541;
+  --colors-background-bg-primary: #0b1220;
+  --colors-border-border-secondary: #1f2530;
+  --colors-background-bg-secondary-alt: #101826;
+  --colors-foreground-fg-quaternary-400: #8b93a3;
+  --component-colors-utility-success-utility-success-50: #073b2a;
+  --component-colors-utility-success-utility-success-700: #34d399;
+  --success-700: #34d399;
+  --success-200: #14532d;
+  --component-colors-utility-blue-utility-blue-700: #60a5fa;
+  --component-colors-utility-blue-utility-blue-50: #0b2942;
+  --component-colors-utility-blue-utility-blue-200: #103454;
+  --blue-700: #60a5fa;
+  --colors-foreground-fg-error-primary: #f87171;
+  --colors-text-text-tertiary-600: #9aa3af;
+  --colors-text-text-success-primary-600: #34d399;
+  --colors-background-bg-brand-primary: #1a1330;
+  --component-colors-utility-error-utility-error-50: #3b0a0a;
+  --error-600: #f87171;
+  --colors-text-text-placeholder-subtle: #475569;
+  --colors-brand-600: #7f56d9;
+  --colors-brand-500: #9e77ed;
+  --base-white: #0b1220;
+}
+
+// box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+

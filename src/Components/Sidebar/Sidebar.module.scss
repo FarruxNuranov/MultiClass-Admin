@@ -1,0 +1,325 @@
+.sidebar {
+  width: 292px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--colors-background-bg-primary);
+  border-radius: 12px;
+  border-right: 1px solid var(--colors-border-border-secondary);
+  padding: 20px 16px;
+  box-sizing: border-box;
+  transition: width 0.3s ease;
+}
+
+.collapsed {
+  width: 80px;
+
+  .sectionTitle,
+  .roleBadge,
+  .name,
+  .email {
+    display: none;
+  }
+
+  .link {
+    width: 48px;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .pin {
+    display: none;
+  }
+
+  .logo {
+    justify-content: center;
+
+    a {
+      display: none;
+    }
+  }
+
+  .profileCard {
+    justify-content: center;
+    background: transparent;
+    padding: 12px 0;
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  a {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--colors-text-text-primary-900);
+    text-decoration: none;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  color: var(--colors-text-text-quaternary-500);
+}
+
+.link {
+  border-radius: 6px;
+  padding: 8px 12px;
+  width: 260px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--colors-text-text-secondary-700);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+
+  &:hover {
+    background: var(--colors-background-bg-secondary-alt);
+    color: var(--colors-text-text-brand-secondary-700);
+  }
+}
+
+.active {
+  background: var(--colors-background-bg-brand-primary);
+  color: var(--colors-text-text-brand-secondary-700);
+  font-weight: 600;
+
+  svg {
+    color: var(--colors-text-text-brand-secondary-700);
+  }
+}
+
+.profileCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--colors-background-bg-secondary-alt);
+  transition: all 0.3s ease;
+}
+
+// .avatar {
+//   width: 36px;
+//   height: 36px;
+//   border-radius: 50%;
+//   object-fit: cover;
+// }
+.avatarIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--colors-border-border-secondary);
+  color: var(--colors-text-text-tertiary-600);
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--colors-text-text-primary-900);
+}
+
+.email {
+  font-size: 12px;
+  color: var(--colors-text-text-quaternary-500);
+  margin: 0;
+}
+
+.pin {
+  margin-left: auto;
+  font-size: 16px;
+  color: var(--colors-foreground-fg-quaternary-400);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.link:hover .pin {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pinActive {
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: var(--colors-text-text-brand-secondary-700);
+}
+
+.roleBadge {
+  background: var(--success-700);
+  color: var(--colors-text-text-white);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.collapseBtn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--colors-text-text-quaternary-500);
+  display: flex;
+  align-items: center;
+}
+
+.profileWrapper {
+  position: relative;
+}
+
+.profileCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  cursor: pointer;
+  border-top: 1px solid var(--colors-border-border-secondary);
+}
+
+.profileMenu {
+  position: absolute;
+  bottom: 60px;
+  left: 12px;
+  right: 12px;
+  background: var(--colors-background-bg-primary);
+  border: 1px solid var(--colors-border-border-secondary);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.menuItem {
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--colors-text-text-secondary-700);
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background: var(--colors-background-bg-secondary-alt);
+}
+
+/* 🔹 Переключатель языка */
+.langSwitch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  border-top: 1px solid var(--colors-border-border-secondary);
+  margin-top: auto;
+  transition: all 0.2s ease;
+}
+
+/* Полноразмерные кнопки (UZ / RU) */
+.langBtn {
+  border: 1px solid var(--colors-border-border-secondary);
+  background: var(--colors-background-bg-primary);
+  color: var(--colors-text-text-secondary-700);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--colors-background-bg-secondary-alt);
+  }
+
+  &.active {
+    background: var(--colors-background-bg-brand-primary);
+    color: var(--colors-text-text-brand-secondary-700);
+    border-color: var(--colors-brand-600);
+  }
+}
+
+/* Маленькие иконки (для свернутого sidebar) */
+.langBtnSmall {
+  border: 1px solid var(--colors-border-border-secondary);
+  background: var(--colors-background-bg-primary);
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 1;
+  padding: 5px 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--colors-background-bg-secondary-alt);
+  }
+
+  &.active {
+    background: var(--colors-background-bg-brand-primary);
+    color: var(--colors-text-text-brand-secondary-700);
+    border-color: var(--colors-brand-600);
+  }
+}
+
+/* Для адаптивности, чтобы не мешало профилю */
+@media (max-height: 600px) {
+  .langSwitch {
+    padding: 6px 0;
+    gap: 6px;
+  }
+  .langBtn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+.sidebar.collapsed {
+  .langSwitch {
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px 0;
+  }
+
+  .langBtn {
+    display: none; // katta tugmalar yashiriladi
+  }
+
+  .langBtnSmall {
+    display: block; // kichik flaglar ko‘rsatiladi
+  }
+}
+
+.langBtnSmall {
+  display: none; // defaultda yashirin
+}

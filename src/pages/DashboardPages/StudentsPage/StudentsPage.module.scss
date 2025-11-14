@@ -1,0 +1,407 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+}
+/* ================== Статистика ================== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--colors-background-bg-primary);
+  border: 1px solid var(--colors-border-border-secondary);
+  border-radius: 12px;
+  padding: 20px;
+  height: 106px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 2px 0 var(--colors-effects-shadows-shadow-xs);
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--colors-text-text-secondary-700);
+  margin: 0;
+}
+
+.value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--colors-text-text-primary-900);
+  margin-top: 4px;
+}
+
+.badge {
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.up {
+  background: var(--component-colors-utility-success-utility-success-50);
+  color: var(--success-700);
+}
+
+.down {
+  background: var(--component-colors-utility-error-utility-error-50);
+  color: var(--colors-foreground-fg-error-primary);
+}
+/* 🔹 Шапка списка */
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+
+
+  h2 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 156%;
+    color: var(--colors-text-text-primary-900);
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+/* 🔹 Поиск */
+.searchBox {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--colors-border-border-primary);
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 257px;
+
+  height: 40px;
+
+  input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    margin-left: 6px;
+    width: 187px;
+    
+    height: 24px;
+    flex: 1;
+  }
+
+  .shortcut {
+    font-size: 12px;
+    color: var(--colors-text-text-quaternary-500);
+    margin-left: 8px;
+    background: var(--colors-background-bg-secondary-alt);
+    border-radius: 4px;
+    padding: 2px 6px;
+  }
+}
+
+.select {
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border: 1px solid var(--colors-border-border-secondary);
+  border-radius: 8px;
+  padding: 8px 12px;
+  padding-right: 32px; 
+  height: 40px;
+  max-width: 171px;
+  width: 100%;
+  font-size: 14px;
+  background: var(--colors-background-bg-primary) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%236b7280' stroke-width='2' viewBox='0 0 24 24'><path d='M6 9l6 6 6-6'/></svg>") no-repeat right 12px center;
+  background-size: 16px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-color: var(--colors-brand-600);
+  }
+}
+
+/* 🔹 Кнопки */
+.exportBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--colors-border-border-primary);
+  border-radius: 8px;
+  padding: 10px 14px;
+  max-width: 101px;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-secondary-700);
+
+  &:hover {
+    background: var(--colors-background-bg-secondary-alt);
+  }
+}
+
+.addBtn {
+  background: var(--colors-background-bg-brand-solid);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 174px;
+  height: 40px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-white);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--colors-brand-500);
+  }
+}
+
+
+/* ================= Таблица студентов ================= */
+.table {
+  margin-top: 16px;
+  border: 1px solid var(--colors-border-border-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 1fr 1fr 100px;
+  align-items: center;
+  padding: 16px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--colors-border-border-secondary);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.head {
+  background: var(--colors-background-bg-secondary-alt);
+  font-weight: 600;
+  color: var(--colors-text-text-secondary-700);
+}
+
+/* --- Student Info --- */
+.user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .name {
+    font-weight: 600;
+    color: var(--colors-text-text-primary-900);
+  }
+
+  .phone {
+    font-size: 12px;
+    color: var(--colors-text-text-quaternary-500);
+  }
+}
+
+/* ================= Attendance ================= */
+.attendance {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  width: fit-content;
+  text-align: center;
+}
+
+.green {
+  background: var(--component-colors-utility-success-utility-success-50);
+  color: var(--success-700); // ✅ kelgan
+}
+
+.red {
+  background: var(--component-colors-utility-error-utility-error-50);
+  color: var(--colors-foreground-fg-error-primary); // ❌ kelmagan
+}
+
+.yellow {
+  background: var(--colors-background-bg-secondary-alt);
+  color: var(--colors-text-text-tertiary-600); // ⚠️ generic
+}
+/* --- Статус посещаемости --- */
+.attendance {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.attendance.red {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.attendance.orange {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.attendance.yellow {
+  background: #fef9c3;
+  color: #ca8a04;
+}
+
+/* --- Actions --- */
+.actionsBtns {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--colors-text-text-quaternary-500);
+
+    &:hover {
+      color: var(--colors-text-text-primary-900);
+    }
+  }
+}
+
+/* ================= Пагинация ================= */
+/* ================= Пагинация ================= */
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--colors-border-border-secondary);
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--colors-text-text-secondary-700);
+    background: var(--colors-background-bg-primary);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--colors-background-bg-secondary-alt);
+    }
+
+    &.active {
+      background: var(--colors-brand-600);
+      color: var(--colors-text-text-white);
+      border-color: var(--colors-brand-600);
+      font-weight: 600;
+    }
+
+    &.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+/* 🔹 Навигационные кнопки (← и →) */
+.pagination :global(.previous),
+.pagination :global(.next) {
+  width: auto;
+  min-width: 60px;
+  padding: 0 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #374151;
+  background: #fff;
+
+  &:hover {
+    background: #f3f4f6;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+  }
+}
+
+/* 🔹 Маленькие экраны */
+@media (max-width: 600px) {
+  .pagination li {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .pagination :global(.previous),
+  .pagination :global(.next) {
+    min-width: 48px;
+    font-size: 12px;
+  }
+}

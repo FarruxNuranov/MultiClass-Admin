@@ -1,0 +1,223 @@
+.page {
+  padding: 16px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  h2 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 156%;
+    color: var(--colors-text-text-primary-900);
+  }
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--colors-background-bg-brand-solid);
+  border-radius: 8px;
+  border: none;
+  padding: 10px 14px;
+ 
+  height: 40px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-white);
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+
+  &:hover {
+    background: #6b46c1;
+  }
+
+  svg {
+    font-size: 18px;
+  }
+}
+
+.grid {
+  flex: 1; // занимает всё оставшееся место
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 1px solid var(--colors-border-border-secondary);
+  padding-top: 20px;
+  margin-bottom: 20px;
+
+  /* 🔹 скролл */
+  overflow-y: auto;
+  max-height: calc(100vh - 200px); // оставляем место для хедера и пагинации
+  padding-right: 6px; // чтобы скроллбар не перекрывал текст
+}
+
+/* можно красиво стилизовать скроллбар */
+.grid::-webkit-scrollbar {
+  width: 6px;
+  display: none;
+}
+
+.grid::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.grid::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 130px; // 🔹 вместо height
+}
+
+.imageBox {
+  width: 195px;
+  height: 130px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.meta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #f9f5ff;
+  border: 1px solid #e9d7fe;
+  border-radius: 9999px;
+  padding: 4px 12px 4px 4px;
+  width: 208px;
+}
+
+.status {
+  border: 1px solid #e9d7fe;
+  border-radius: 9999px;
+  padding: 2px 8px;
+  background: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  color: #6941c6;
+}
+
+.date {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  color: #6941c6;
+}
+
+.sent {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 156%;
+  color: #181d27;
+}
+
+.pagination {
+  margin-top: auto; // прижимает к низу
+  border-top: 1px solid var(--colors-border-border-secondary);
+  padding: 12px 24px 16px;
+  width: 100%;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .titlePagination {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--colors-text-text-secondary-700);
+  }
+
+  select {
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 14px;
+    width: 189px;
+    height: 36px;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--colors-text-text-placeholder);
+    cursor: pointer;
+  }
+}
+
+.right {
+  display: flex;
+  gap: 8px;
+}
+
+.pageBtn {
+  border: 1px solid var(--colors-border-border-primary);
+  border-radius: 8px;
+  padding: 8px 12px;
+
+  height: 36px;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--colors-background-bg-primary);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--colors-text-text-secondary-700);
+
+  &:hover {
+    background: #f9fafb;
+  }
+}

@@ -1,0 +1,1298 @@
+{
+  "dashboard": "Dashboard",
+  "teacherDashboard": "Teacher Dashboard",
+  "schedule": "Schedule",
+  "teacherSchedule": "My Schedule",
+  "attendance": "Attendance",
+  "students": "Students",
+  "parents": "Parents",
+  "lessonPlan": "Lesson Plan",
+  "staff": "Employees",
+  "reports": "Reports",
+  "messages": "Announcements",
+  "settings": "Settings",
+  "support": "Support",
+
+  "main": "Main",
+  "other": "Other",
+  "profile": "My Profile",
+  "logout": "Logout",
+
+  "language": "Language",
+  "uz": "Uzbek",
+  "ru": "Russian",
+  "en": "English",
+
+  "mrr": "Monthly Recurring Revenue (MRR)",
+  "avgScore": "Average Score Index",
+  "latePayments": "Late Payments",
+  "sales": "Sales",
+  "vsLast30Days": "vs last 30 days",
+  "12 months": "12 months",
+  "30 days": "30 days",
+  "7 days": "7 days",
+  "24 hours": "24 hours",
+
+  "subjectsResults": "Subject Results",
+  "subjectName": "Subject Name",
+  "averageScore": "Average Score",
+
+  "breadcrumbs": {
+    "students": "Students",
+    "studentCreate": "Add Student",
+    "studentDetails": "Student Details",
+    "teachers": "Staff",
+    "teacherCreate": "Add Staff",
+    "teacherDetails": "Staff Details",
+    "parents": "Parents",
+    "parentCreate": "Add Parent",
+    "parentDetails": "Parent Details",
+    "lessonPlan": "Lesson Plan",
+    "lessonDetails": "Lesson Details",
+    "grades": "Grading",
+    "schedule": "Schedule",
+    "scheduleDetails": "Schedule Details",
+    "reports": "Reports",
+    "finance": "Finance",
+    "messages": "Messages",
+    "settings": "Settings",
+    "support": "Support",
+    "attendance": "Attendance",
+    "details": "Details"
+  },
+
+  "schedulePage": {
+    "title": "Schedule",
+    "rebuild": "Rebuild",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "classesTitle": "{{grade}}-classes",
+    "noTeacher": "—"
+  },
+
+  "singleSchedule": {
+    "breadcrumbsMain": "Schedule",
+    "weekNumber": "Week {{num}}",
+    "weekRange": "({{start}} — {{end}})",
+    "swapLessons": "Swap lessons",
+    "rebuildSchedule": "Rebuild schedule",
+    "loading": "Loading...",
+    "notFound": "Schedule not found",
+    "error": "An error occurred",
+    "noLessons": "No lessons"
+  },
+
+  "swapModal": {
+    "title": "Swap Lessons",
+    "description": "You can swap one lesson with another in the schedule.",
+    "selectDay": "Day of the week",
+    "selectLesson": "Lesson",
+    "selectOption": "Select",
+    "onceOnly": "One-time — applies only for this week if checked",
+    "cancel": "Cancel",
+    "save": "Save",
+    "alertSelectLessons": "Please select lessons!",
+    "alertSameLesson": "Cannot swap the same lesson!"
+  },
+
+  "editSchedule": {
+    "breadcrumbsMain": "Schedule",
+    "breadcrumbsEdit": "Edit Schedule",
+    "title": "Editing schedule for {{className}}",
+    "cancel": "Cancel",
+    "save": "Save",
+    "loading": "⏳ Loading data...",
+    "tableSubject": "Subject",
+    "tableHours": "Hours",
+    "tableTeacher": "Staff",
+    "selectSubject": "Select subject",
+    "selectTeacher": "Select Staff",
+    "addRow": "+ Add subject",
+    "introTitle": "{{className}} schedule",
+    "introDescription": "Enter subjects and weekly hours — the system will automatically generate a schedule.",
+    "errorFetch": "Error while loading data",
+    "errorSave": "Error saving schedule: {{message}}"
+  },
+
+  "attendancePage": {
+    "breadcrumbsMain": "Attendance",
+    "attendance": "Attendance",
+    "present": "Present",
+    "absent": "Absent",
+    "class": "Class",
+    "export": "Export",
+    "averageAttendance": "Average Attendance",
+    "studentsPresent": "Present Students",
+    "studentsAbsent": "Absent Students",
+    "calendar": "Calendar"
+  },
+
+  "attendanceTable": {
+    "class": "Classes",
+    "attendance": "Attendance",
+    "present": "Present",
+    "absent": "Absent",
+    "totalStudents": "Total Students",
+    "loading": "⏳ Loading...",
+    "error": "An error occurred"
+  },
+
+  "singleAttendance": {
+    "breadcrumbsMain": "Attendance",
+    "attendance": "Attendance",
+    "present": "Present",
+    "absent": "Absent",
+    "class": "{{className}} class",
+    "today": "Today",
+    "export": "Export",
+    "studentName": "Student Name",
+    "attendanceStatus": "Status",
+    "checkIn": "Check-in Time",
+    "checkOut": "Check-out Time",
+    "loading": "⏳ Loading...",
+    "notFound": "❌ No students found",
+    "statusPresent": "Present",
+    "statusLate": "Late",
+    "statusEarly": "Left early",
+    "statusAbsent": "Absent"
+  },
+
+  "createStudent": {
+    "breadcrumb": "Create Student",
+    "title": "Personal Information",
+    "subtitle": "Enter the main details about the new student.",
+    "profileTitle": "Profile",
+    "profileSubtitle": "Fill in the student's profile information.",
+    "fields": {
+      "firstName": "First Name *",
+      "lastName": "Last Name *",
+      "birthDate": "Date of Birth *",
+      "passportId": "Passport ID *",
+      "jshshir": "JSHSHIR *",
+      "email": "Email *",
+      "password": "Password *",
+      "class": "Class *",
+      "phone": "Phone *",
+      "extraPhone": "Additional Phone",
+      "telegram": "Telegram *",
+      "bio": "About Student *"
+    },
+    "upload": {
+      "button": "⬆ Click to upload",
+      "hint": "SVG, PNG, JPG or GIF (max. 800×400px)"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "create": "Create Student"
+    },
+    "alerts": {
+      "success": "✅ Student created successfully!",
+      "error": "❌ Error:"
+    },
+    "classLoading": "Loading...",
+    "charLeft": "{{count}} characters left"
+  },
+
+  "studentsPage": {
+    "breadcrumbsMain": "Students",
+    "students": "Students",
+    "averageScore": "Average Score",
+    "attendance": "Attendance",
+    "searchPlaceholder": "Search (name, surname, phone...)",
+    "classes": "Classes",
+    "shift": "Shift",
+    "shiftMorning": "Morning",
+    "shiftAfternoon": "Afternoon",
+    "export": "Export",
+    "addStudent": "Add Student",
+    "deleteConfirm": "Are you sure you want to delete this student?",
+    "avgDown": "↓ 2.3%",
+    "attUp": "↑ 12%"
+  },
+
+  "studentsTable": {
+    "name": "Student Name",
+    "email": "Email",
+    "phone": "Phone",
+    "extraPhone": "Extra Phone",
+    "telegram": "Telegram",
+    "loading": "⏳ Loading...",
+    "error": "An error occurred",
+    "empty": "🚫 No students found",
+    "call": "Call",
+    "edit": "Edit",
+    "delete": "Delete",
+    "birthDate": "Birth date",
+    "class": "Class"
+  },
+
+  "studentInfo": {
+    "notFound": "Student not found",
+    "edit": "Edit",
+    "export": "Export",
+    "address": "Address",
+    "telegram": "Telegram",
+    "phone": "Phone",
+    "summaryTitle": "Student Summary:",
+    "summaryEmpty": "No information added about the student yet.",
+    "readMore": "Read more",
+    "subjectsTitle": "Grades by Subject",
+    "subject": "Subject",
+    "grades": "Grades",
+    "averageGrade": "Average",
+    "noGradesTitle": "No grades available yet",
+    "noGradesDesc": "The student has not received any grades yet.",
+    "documents": "Documents",
+    "defaultAddress": "Tashkent, Uzbekistan"
+  },
+
+  "studentEdit": {
+    "breadcrumbsEdit": "Edit",
+    "personalTitle": "Personal Information",
+    "personalSubtitle": "Update the student's basic information.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "birthDate": "Date of Birth",
+    "class": "Class",
+    "classSelect": "Select class",
+    "classLoading": "Loading...",
+    "jshshir": "JSHSHIR (ID)",
+    "cancel": "Cancel",
+    "save": "Save Changes",
+    "profileTitle": "Profile",
+    "profileSubtitle": "Update the student's profile information.",
+    "uploadBtn": "⬆ Click to upload",
+    "uploadHint": "SVG, PNG, JPG or GIF (max. 800×400px)",
+    "phone": "Phone",
+    "extraPhone": "Extra Phone",
+    "telegram": "Telegram",
+    "bio": "About Student",
+    "bioPlaceholder": "Write a short description...",
+    "charsLeft": "{{count}} characters left",
+    "updated": "✅ Data updated!",
+    "error": "❌ Error:"
+  },
+
+  "createParent": {
+    "breadcrumb": "Create Parent",
+    "title": "Personal Information",
+    "subtitle": "Enter the main details about the new parent.",
+    "profileTitle": "Profile",
+    "profileSubtitle": "Fill in the parent’s profile information.",
+    "fields": {
+      "firstName": "First Name *",
+      "lastName": "Last Name *",
+      "email": "Email *",
+      "address": "Address *",
+      "phone": "Phone *",
+      "extraPhone": "Additional Phone",
+      "telegram": "Telegram *",
+      "bio": "About Parent *"
+    },
+    "upload": {
+      "button": "⬆ Click to upload",
+      "hint": "SVG, PNG, JPG or GIF (max. 800×400px)"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "create": "Create Parent",
+      "createStudent": "Create Student"
+    },
+    "alerts": {
+      "success": "✅ Parent created successfully!",
+      "error": "❌ Error:"
+    },
+    "charLeft": "{{count}} characters left"
+  },
+
+  "parentsPage": {
+    "title": "Parents",
+    "total": "Total Parents",
+    "childrenCount": "Total Children",
+    "searchPlaceholder": "Search (name, surname, phone...)",
+    "export": "Export",
+    "add": "Add Parent",
+    "confirmDelete": "Are you sure you want to delete this parent?",
+    "increase": "↑ 12%",
+    "decrease": "↓ 3%"
+  },
+
+  "parentsTable": {
+    "name": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "children": "Children",
+    "notFound": "🚫 No parents found",
+    "call": "Call",
+    "delete": "Delete",
+    "edit": "Edit",
+    "addChild": "➕ Add child feature not implemented yet",
+    "loading": "⏳ Loading...",
+    "error": "❌ Error",
+    "extraPhone": "Extra phone",
+    "telegram": "Telegram account"
+  },
+
+  "parentInfo": {
+    "notFound": "Parent not found",
+    "edit": "Edit",
+    "export": "Export",
+    "address": "Address",
+    "telegram": "Telegram",
+    "phone": "Phone",
+    "summaryTitle": "Parent Summary:",
+    "summaryEmpty": "No information added yet.",
+    "childLabel": "Child",
+    "tabs": {
+      "grades": "Grades",
+      "summary": "Summary",
+      "docs": "Documents"
+    },
+    "table": {
+      "subject": "Subject",
+      "grades": "Grades",
+      "avg": "Average grade"
+    },
+    "noGrades": {
+      "title": "No grades available",
+      "desc": "The child has not received any grades yet."
+    },
+    "summaryText": "The student attends lessons regularly, is active and motivated."
+  },
+
+  "parentEdit": {
+    "breadcrumb": "Edit",
+    "title": "Personal Information",
+    "subtitle": "Enter the parent's main details.",
+    "profileTitle": "Profile",
+    "profileSubtitle": "Fill in the profile information.",
+    "fields": {
+      "firstName": "First Name *",
+      "lastName": "Last Name *",
+      "passportId": "Passport ID *",
+      "jshshir": "JSHSHIR *",
+      "phone": "Phone *",
+      "extraPhone": "Additional phone",
+      "telegram": "Telegram *",
+      "bio": "About parent *"
+    },
+    "upload": {
+      "button": "⬆ Click to upload",
+      "hint": "SVG, PNG, JPG or GIF (max. 800×400px)"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "save": "Save changes"
+    },
+    "alerts": {
+      "success": "✅ Information updated!",
+      "error": "❌ Error:"
+    },
+    "charLeft": "{{count}} characters left"
+  },
+
+  "createTeacher": {
+    "breadcrumb": "Create Staff",
+    "title": "Personal Information",
+    "subtitle": "Enter the main details about the new Staff.",
+    "profileTitle": "Profile",
+    "profileSubtitle": "Fill in the teacher’s profile information.",
+    "fields": {
+      "firstName": "First Name *",
+      "lastName": "Last Name *",
+      "passportId": "Passport ID *",
+      "jshshir": "JSHSHIR *",
+      "email": "Email *",
+      "password": "Password *",
+      "phone": "Phone *",
+      "extraPhone": "Additional Phone",
+      "telegram": "Telegram *",
+      "bio": "About Staff *"
+    },
+    "upload": {
+      "button": "⬆ Click to upload",
+      "hint": "SVG, PNG, JPG or GIF (max. 800×400px)"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "create": "Create Staff"
+    },
+    "alerts": {
+      "required": "❌ Please fill in the required fields!",
+      "success": "✅ Staff created successfully!",
+      "error": "❌ Error:"
+    },
+    "charLeft": "{{count}} characters left"
+  },
+
+  "staffPage": {
+    "breadcrumb": "Staff",
+    "stats": {
+      "salaryLabel": "Total salary paid to staff",
+      "totalSalary": "104,746,000 UZS",
+      "staffCountLabel": "Number of staff",
+      "salaryPrice":"SUM"
+    },
+    "listTitle": "Staff List",
+    "searchPlaceholder": "Search (name, surname, phone...)",
+    "filterAll": "All classes",
+    "buttons": {
+      "export": "Export",
+      "add": "Add Staff"
+    },
+    "alerts": {
+      "deleteConfirm": "Are you sure you want to delete?"
+    },
+    "loading": "⏳ Loading...",
+    "error": "❌ Error occurred"
+  },
+
+  "staffTable": {
+    "columns": {
+      "name": "Name Surname",
+      "email": "Email",
+      "role": "Role",
+      "branch": "Branch",
+      "class": "Class",
+      "created": "Created at"
+    },
+    "edit": "Edit",
+    "delete": "Delete",
+    "noPhone": "No phone",
+    "notFound": "Staff not found",
+    "error": "Error occurred",
+    "modal": {
+      "deleteTitle": "Delete staff",
+      "deleteText": "Are you sure you want to delete staff \"{{name}}\"?",
+      "buttons": {
+        "deleteConfirm": "Delete",
+        "deleteCancel": "Cancel"
+      }
+    }
+  },
+
+  "staffInfo": {
+    "notFound": "❌ Staff not found",
+    "edit": "Edit",
+    "export": "Export",
+    "address": "Address",
+    "telegram": "Telegram",
+    "phone": "Phone",
+    "aboutTitle": "About Staff:",
+    "aboutEmpty": "No information about this staff member yet.",
+    "more": "Read more",
+    "docsTitle": "Documents"
+  },
+
+  "staffEdit": {
+    "breadcrumb": "Edit Staff",
+    "top": {
+      "title": "Edit Staff Information",
+      "subtitle": "Make necessary changes and save"
+    },
+    "labels": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone",
+      "extraPhone": "Extra Phone",
+      "role": "Staff Role",
+      "salary": "Salary",
+      "telegram": "Telegram",
+      "bio": "Bio"
+    },
+    "placeholders": {
+      "bio": "Write a short description about yourself..."
+    },
+    "validation": {
+      "firstName": "Enter first name",
+      "lastName": "Enter last name",
+      "phoneRequired": "Enter phone number",
+      "phonePattern": "Enter 9-digit number (901234567)",
+      "role": "Select role"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "save": "Save"
+    },
+    "success": "✅ Data updated successfully!",
+    "errorDefault": "An error occurred. Please try again.",
+    "roleFetchError": "Error fetching roles",
+    "charCount": "{{count}} characters remaining"
+  },
+
+  "classesSettings": {
+    "title": "Classes",
+    "addBtn": " Add Class",
+    "loading": "Loading...",
+    "columns": {
+      "name": "Class Name",
+      "grade": "Grade",
+      "teacher": "Class Teacher"
+    },
+    "modal": {
+      "createTitle": "Create Class",
+      "editTitle": "Edit Class",
+      "deleteTitle": "Confirm Deletion",
+      "deleteText": "Are you sure you want to delete {{title}} (Grade {{grade}})?",
+      "labels": {
+        "name": "Class Name *",
+        "grade": "Grade *",
+        "teacher": "Class Teacher *"
+      },
+      "placeholders": {
+        "name": " A",
+        "grade": "Select grade",
+        "teacher": "Select teacher"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "create": "Create",
+        "save": "Save",
+        "deleteConfirm": "Yes, delete",
+        "deleteCancel": "No"
+      }
+    }
+  },
+
+  "subjectsSettings": {
+    "title": "Subjects",
+    "addBtn": " Add Subject",
+    "loading": "Loading...",
+    "columns": {
+      "name": "Subject Name"
+    },
+    "modal": {
+      "createTitle": "Create Subject",
+      "editTitle": "Edit Subject",
+      "labels": {
+        "name": "Subject Name"
+      },
+      "placeholders": {
+        "name": "Example: Mathematics"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "create": "Create",
+        "save": "Save"
+      }
+    }
+  },
+
+  "createAnnouncement": {
+    "breadcrumbs": {
+      "list": "Announcements",
+      "create": "Create New Announcement"
+    },
+    "header": {
+      "title": "Create New Announcement",
+      "publishLabel": "Publish date and time",
+      "saveBtn": "Create"
+    },
+    "fields": {
+      "title": "Title",
+      "titlePlaceholder": "Announcement title",
+      "text": "Announcement text",
+      "status": "Status",
+      "image": "Image"
+    },
+    "statusOptions": {
+      "planned": "Planned",
+      "sent": "Sent"
+    },
+    "upload": {
+      "clickToUpload": "Click to upload",
+      "orDrop": "or drop it here",
+      "hint": "SVG, PNG, JPG or GIF (max. 10 MB)"
+    },
+    "alerts": {
+      "success": "✅ Announcement created successfully!",
+      "error": "❌ Error: {{error}}"
+    }
+  },
+
+  "messagesPage": {
+    "breadcrumbs": "Announcements",
+    "title": "Latest Announcements",
+    "addBtn": "Create Announcement",
+    "loading": "⏳ Loading...",
+    "error": "❌ Error: {{error}}",
+    "status": {
+      "planned": "Planned",
+      "sent": "Sent"
+    },
+    "pagination": {
+      "pageInfo": "Page {{current}} of {{total}}",
+      "options": {
+        "10": "10/100 per page",
+        "20": "20/100 per page",
+        "50": "50/100 per page",
+        "100": "100/100 per page"
+      },
+      "prev": "Previous",
+      "next": "Next"
+    }
+  },
+
+  "announcementInfo": {
+    "breadcrumbs": {
+      "list": "Announcements",
+      "details": "Announcement Details"
+    },
+    "buttons": {
+      "edit": "Edit",
+      "date": "Date"
+    },
+    "noDate": "—"
+  },
+
+  "announcementEdit": {
+    "breadcrumbs": {
+      "list": "Announcements",
+      "details": "Announcement Details"
+    },
+    "header": {
+      "title": "Edit Announcement",
+      "publishLabel": "Publish date and time",
+      "saveBtn": "Save changes",
+      "cancelBtn": "Cancel"
+    },
+    "fields": {
+      "title": "Title",
+      "titlePlaceholder": "Announcement title",
+      "text": "Announcement text",
+      "status": "Status",
+      "image": "Image"
+    },
+    "statusOptions": {
+      "planned": "Planned",
+      "sent": "Sent"
+    },
+    "upload": {
+      "clickToUpload": "Click to upload",
+      "orDrop": "or drop it here",
+      "hint": "SVG, PNG, JPG or GIF (max. 10 MB)"
+    }
+  },
+
+  "teachersDashboard": {
+    "header": {
+      "title": "Teacher Dashboard",
+      "dateRange": "Jan 10, 2025 – Jan 16, 2025"
+    },
+    "filters": {
+      "12months": "12 months",
+      "30days": "30 days",
+      "7days": "7 days",
+      "24hours": "24 hours"
+    },
+    "leftTable": {
+      "title": "My Classes",
+      "columns": {
+        "class": "Class",
+        "attendance": "Attendance",
+        "students": "Students",
+        "teacher": "Class Teacher"
+      }
+    },
+    "rightPanel": {
+      "title": "Lesson Schedule",
+      "subtitle": "Today's lessons and assignments.",
+      "tabs": {
+        "schedule": "Schedule",
+        "tasks": "Assignments"
+      },
+      "sampleSchedule": "Algebra: Quadratic equations and their solutions",
+      "sampleTask": "Evaluate homework",
+      "taskCount": "tasks"
+    }
+  },
+
+  "teachersSchedulePage": {
+    "breadcrumbs": {
+      "schedule": "Schedule",
+      "teacher": "Teacher Schedule"
+    },
+    "week": "week",
+    "unknownClass": "Unknown class",
+    "status": {
+      "loading": "⏳ Loading...",
+      "error": "❌ Error: {{error}}",
+      "empty": "⚠️ No schedule found"
+    }
+  },
+
+  "settingsPage": {
+    "breadcrumbs": {
+      "title": "Settings"
+    },
+    "tabs": {
+      "general": "General settings",
+      "subjects": "Subjects",
+      "classes": "Classes",
+      "positions": "Positions",
+      "branches": "Branches",
+      "sms": "SMS Templates"
+    }
+  },
+
+  "smsTemplatesSettings": {
+    "addBtn": "Add Template",
+    "columns": {
+      "name": "Template Name",
+      "content": "Message Text"
+    },
+    "modal": {
+      "createTitle": "Add New Template",
+      "editTitle": "Edit Template",
+      "deleteTitle": "Delete Template",
+      "deleteText": "Are you sure you want to delete the template \"{{title}}\"?",
+      "labels": {
+        "name": "Template Name",
+        "content": "SMS Text"
+      },
+      "placeholders": {
+        "name": "Example: Payment Reminder",
+        "content": "Example: Dear user, you have successfully registered!"
+      }
+    },
+    "messages": {
+      "created": "New template added successfully",
+      "updated": "Template updated successfully",
+      "deleted": "Template deleted successfully"
+    },
+    "form": {
+      "dayLabel": "SMS send day",
+      "dayPlaceholder": "Select day",
+      "timeLabel": "SMS send time",
+      "timePlaceholder": "Select time",
+      "receiverLabel": "Recipients",
+      "receiverPlaceholder": "Select recipient",
+      "autoSmsLabel": "Auto SMS"
+    }
+  },
+
+  "lessonsPlanPage": {
+    "title": "Lesson Plan",
+    "subtitle": "Select one of the classes to manage your lesson plan.",
+    "status": {
+      "loading": "⏳ Loading...",
+      "error": "❌ Error: {{error}}",
+      "empty": "⚠️ No classes available yet."
+    },
+    "gradeTitle": "{{grade}}-grade classes",
+    "noTeacher": "—"
+  },
+
+  "lessonPlanPage": {
+    "title": "Lesson Plan",
+    "classTitle": "{{id}}-grade",
+    "classPlanTitle": "{{id}}-grade Lesson Plan",
+    "quarter": "Quarter {{number}}",
+    "topicList": "List of topics",
+    "hours": "hours",
+    "searchPlaceholder": "Search",
+    "addTopic": "Add topic",
+    "columns": {
+      "topic": "Topic",
+      "date": "Date",
+      "status": "Status"
+    },
+    "statuses": {
+      "published": "Published",
+      "planned": "Planned"
+    },
+    "status": {
+      "loading": "⏳ Loading...",
+      "error": "❌ Error: {{error}}"
+    },
+    "actions": {
+      "grade": "Grade",
+      "edit": "Edit"
+    }
+  },
+
+  "lessonInfoDetails": {
+    "noDescription": "No information available",
+    "lessonInfo": "Lesson Information",
+    "buttons": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "fields": {
+      "class": "Class",
+      "date": "Date",
+      "author": "Created by"
+    },
+    "notSet": "Not specified",
+    "materials": {
+      "title": "Lesson Materials",
+      "download": "Download",
+      "noFiles": "No files available"
+    }
+  },
+
+  "lessonEditDetails": {
+    "alerts": {
+      "fillRequired": "Please fill in all required fields."
+    },
+    "fields": {
+      "title": "Topic Title",
+      "subject": "Subject",
+      "date": "Date"
+    },
+    "placeholders": {
+      "title": "Enter topic title",
+      "selectSubject": "Select subject"
+    },
+    "sections": {
+      "lectureTitle": "Lesson Lecture",
+      "lectureHelper": "This lecture will be visible to students and school administration.",
+      "materialsTitle": "Lesson Materials",
+      "materialsHelper": "Here you can upload lesson-related files and homework assignments."
+    },
+    "upload": {
+      "click": "Click to upload",
+      "orDrop": "or drag files here",
+      "fileTypes": "DOCX, XLS, PPT, PDF, PNG, JPG (max. 50MB)"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "save": "Save"
+    }
+  },
+
+  "createLesson": {
+    "alerts": {
+      "fillRequired": "Please fill in all required fields.",
+      "error": "An error occurred. Please try again."
+    },
+    "fields": {
+      "title": "Topic Title",
+      "subject": "Subject",
+      "date": "Date"
+    },
+    "placeholders": {
+      "title": "Enter topic title",
+      "selectSubject": "Select subject"
+    },
+    "sections": {
+      "lectureTitle": "Lesson Lecture",
+      "lectureHelper": "This lecture will be visible to students and school administration.",
+      "materialsTitle": "Lesson Materials"
+    },
+    "upload": {
+      "click": "Click to upload",
+      "orDrop": "or drag files here",
+      "fileTypes": "DOCX, XLS, PPT, PDF, PNG, JPG (max. 50MB)",
+      "uploaded": "Uploaded"
+    },
+    "noFiles": "No files uploaded yet",
+    "buttons": {
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving..."
+    },
+    "rightBox": {
+      "placeholder": "Additional information will appear here"
+    }
+  },
+
+  "lessonGradesPage": {
+    "breadcrumbs": {
+      "plan": "Lesson Plan",
+      "grades": "Grading"
+    },
+    "title": "Set Grades",
+    "loading": "Loading...",
+    "noHomeworks": "No homeworks available.",
+    "table": {
+      "assignment": "Assignment",
+      "message": "Message",
+      "files": "Files",
+      "grade": "Grade",
+      "noGrade": "—"
+    }
+  },
+
+  "gradesPage": {
+    "title": "Grades",
+    "average": "Average",
+    "noSubjects": "No subjects available."
+  },
+
+  "studentDashboard": {
+    "welcome": "Welcome",
+    "loading": "Loading...",
+    "student": "Student",
+    "user": "User",
+    "tasks": "Assignments",
+    "deadlines": "Deadlines and tasks",
+    "attendance": "Attendance",
+    "progress": "Progress",
+    "rating": "Rating",
+    "schedule": "Class Schedule"
+  },
+
+  "myHomework": {
+    "title": "Homework",
+    "subtitle": "Assignments and tasks",
+    "loading": "Loading...",
+    "empty": "No homework found",
+    "unknownSubject": "Unknown subject",
+    "noDescription": "No description available",
+    "status": {
+      "graded": "Checked",
+      "pending": "Pending review",
+      "notSubmitted": "Not submitted"
+    }
+  },
+
+  "singleHomework": {
+    "loading": "Loading...",
+    "notFound": "Not found",
+    "subject": "Subject",
+    "homework": "homework",
+    "status": {
+      "graded": "Checked",
+      "pending": "Pending review",
+      "notSubmitted": "Not submitted"
+    },
+    "grade": "Grade",
+    "maxGrade": "Max grade",
+    "result": "Result",
+    "noInfo": "No information available",
+    "lectureBtn": "Lesson lecture",
+    "uploadTitle": "Upload your assignment",
+    "upload": {
+      "click": "Click to upload",
+      "orDrop": "or drop files here",
+      "hint": "SVG, PNG, JPG or GIF (max. 10 MB)",
+      "new": "New file added",
+      "loading": "⏳ Uploading...",
+      "submit": "Submit",
+      "download": "Download"
+    }
+  },
+
+  "lectureDetail": {
+    "loading": "Loading...",
+    "notFound": "Information not found",
+    "title": "Lesson Lecture",
+    "noDescription": "No description available",
+    "materials": {
+      "title": "Lesson materials",
+      "empty": "No materials available",
+      "noSize": "Unknown size",
+      "download": "Download"
+    }
+  },
+
+  "Studentprofile": {
+    "title": "Profile",
+    "loading": "Loading...",
+    "noPhone": "+998••• •• ••",
+    "generalSettings": "General settings",
+    "editInfo": "Edit information",
+    "appLanguage": "App language",
+    "langUz": "Uzbek",
+    "langRu": "Russian",
+    "langEn": "English"
+  },
+  "verification": {
+    "title": "Verification code sent",
+    "subtitleBefore": "We have sent the code via Telegram to",
+    "subtitleAfter": "phone number.",
+    "enterFullCode": "Please enter the full 4-digit code!",
+    "success": "Verification successful!",
+    "incorrectCode": "Incorrect code. Please try again.",
+    "codeResent": "Code has been resent!",
+    "verifyBtn": "Verify",
+    "resend": "Resend",
+    "resending": "Sending...",
+    "resendIn": "Resend in ({{timer}}s)",
+    "backToLogin": "Back to login"
+  },
+  "selectRole": {
+    "title": "Login",
+    "subtitle": "Who do you want to log in as? Please choose your role!",
+    "chooseRole": "Please select a role!",
+    "phoneNotFound": "Phone number or password not found!",
+    "roleRequired": "Please select your role!",
+    "loginError": "An error occurred during login!",
+    "serverError": "Server connection error!",
+    "loginBtn": "Login"
+  },
+  "role": {
+    "admin": "Administrator",
+    "teacher": "Teacher"
+  },
+  "resetPassword": {
+    "title": "Set a new password",
+    "subtitle": "Create a password to access your profile.",
+    "passwordLabel": "Password",
+    "confirmPasswordLabel": "Confirm password",
+    "passwordPlaceholder": "Enter password",
+    "confirmPasswordPlaceholder": "Confirm password",
+    "ruleLength": "✓ Must be at least 8 characters long",
+    "ruleSpecial": "✓ Must contain at least one special character (!@#$%^&*?)",
+    "saveBtn": "Save password",
+    "backToLogin": "Back to login",
+    "emptyWarning": "Please enter a password",
+    "mismatchError": "Passwords do not match",
+    "weakPassword": "Password does not meet security requirements",
+    "success": "Password saved successfully!"
+  },
+  "login": {
+    "title": "Login",
+    "subtitle": "Welcome! Please enter your details.",
+    "phoneLabel": "Phone number",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "••••••••",
+    "togglePassword": "Show or hide password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "loading": "Logging in...",
+    "loginBtn": "Login"
+  },
+  "forgotPassword": {
+    "title": "Forgot your password?",
+    "subtitle": "We’ll send a verification message to your Telegram.",
+    "phoneLabel": "Your phone number",
+    "phonePlaceholder": "+998 __ ___ __ __",
+    "resetBtn": "Reset password",
+    "backToLogin": "Back to login",
+    "errors": {
+      "required": "Please enter your phone number!",
+      "invalidFormat": "Invalid format! (+998 90 123 45 67)"
+    }
+  },
+  "positionsSettings": {
+    "title": "Positions",
+    "addBtn": "Add position",
+    "columns": {
+      "name": "Name",
+      "actions": "Actions"
+    },
+    "modal": {
+      "createTitle": "Add position",
+      "editTitle": "Edit position",
+      "deleteTitle": "Delete position",
+      "deleteText": "Delete position “{{title}}”?",
+      "labels": {
+        "name": "Position name"
+      },
+      "placeholders": {
+        "name": "Example: Administrator"
+      },
+      "buttons": {
+        "create": "Add",
+        "save": "Save",
+        "cancel": "Cancel",
+        "deleteConfirm": "Delete",
+        "deleteCancel": "Cancel"
+      }
+    },
+    "messages": {
+      "created": "Position created successfully",
+      "updated": "Position updated successfully",
+      "deleted": "Position deleted",
+      "loadError": "Error loading position",
+      "saveError": "Error saving position",
+      "deleteError": "Error deleting position"
+    }
+  },
+  "validation": {
+    "required": "This field is required",
+    "max": "Too long (100)"
+  },
+  "common": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "create": "Create",
+    "save": "Save",
+    "error": "An error occurred"
+  },
+  "branchesSettings": {
+    "columns": {
+      "name": "Название филиала",
+      "address": "Адрес"
+    },
+    "addBtn": "Добавить филиал",
+    "modal": {
+      "createTitle": "Добавить новый филиал",
+      "editTitle": "Редактировать филиал",
+      "deleteTitle": "Удалить филиал",
+      "deleteText": "Вы уверены, что хотите удалить филиал «{{title}}»?",
+      "labels": {
+        "name": "Название филиала",
+        "address": "Адрес"
+      },
+      "placeholders": {
+        "name": "Например: Главный филиал",
+        "address": "Например: Ташкент, Юнусабадский район, улица Амира Темура 101"
+      }
+    },
+    "notifications": {
+      "created": "Филиал успешно добавлен!",
+      "updated": "Филиал успешно обновлён!",
+      "deleted": "Филиал удалён!",
+      "errorSave": "Ошибка при сохранении данных!",
+      "errorDelete": "Ошибка при удалении филиала!"
+    }
+  },
+  "finance": {
+    "breadcrumb": "Finance",
+    "period": {
+      "24h": "24 hours",
+      "7days": "7 days",
+      "30days": "30 days",
+      "12months": "12 months",
+      "custom": "Custom range"
+    },
+    "stats": {
+      "total": "Total amount",
+      "unpaid": "Unpaid / Pending"
+    },
+    "messages": {
+      "created": "Payment added successfully!",
+      "updated": "Payment updated successfully!",
+      "deleted": "Payment deleted successfully!"
+    }
+  },
+  "salesChart": {
+    "title": "Sales Types",
+    "unknown": "Unknown",
+    "currency": "UZS",
+    "noData": "No data available"
+  },
+  "sendSms": {
+    "title": "Send SMS",
+    "subtitle": "Send SMS to selected users",
+    "templateLabel": "Select template",
+    "templatePlaceholder": "Choose one of the templates",
+    "messageLabel": "Message text",
+    "messagePlaceholder": "Enter your message...",
+    "nameHint": "The student's name will be inserted automatically",
+    "monthHint": "The month name will be inserted automatically",
+    "cancel": "Cancel",
+    "send": "Send",
+    "emptyMessage": "Message text cannot be empty",
+    "successTitle": "SMS Sent!",
+    "successDesc": "The message has been successfully sent to selected users.",
+    "errorTitle": "Error",
+    "errorDesc": "An error occurred while sending the SMS.",
+    "noPhonesFound": "No phone numbers found"
+  },
+  "payments": {
+    "title": "Payments",
+    "searchPlaceholder": "Search",
+    "export": "Export",
+    "sendSms": "Send SMS",
+    "addPayment": "Add Payment",
+    "noSelectionWarning": "Select at least one student first!",
+    "smsSent": "SMS sent successfully!",
+    "deleteSuccess": "Payment deleted successfully",
+    "deleteError": "Error occurred during deletion",
+    "createSuccess": "Payment added successfully",
+    "updateSuccess": "Payment updated successfully",
+    "saveError": "Error occurred during saving",
+    "status": {
+      "all": "All",
+      "pending": "Pending",
+      "paid": "Paid",
+      "notPaid": "Not Paid"
+    },
+    "filter": {
+      "typePlaceholder": "Payment type",
+      "studentPlaceholder": "Select student",
+      "classPlaceholder": "Select class"
+    },
+    "column": {
+      "student": "Student Full Name",
+      "class": "Class",
+      "status": "Status",
+      "amount": "Amount",
+      "paymentType": "Payment Type",
+      "note": "Note",
+      "actions": "Actions",
+      "date": "Date",
+      "check": "Receipt Image"
+    },
+    "tooltip": {
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete",
+      "downloadCheck": "Download Receipt",
+      "download": "Download",
+      "sms": "Send SMS",
+      "addPayment": "Add payment"
+    },
+    "popconfirm": {
+      "title": "Confirm payment deletion?",
+      "ok": "Yes",
+      "cancel": "No"
+    },
+    "pagination": {
+      "total": "entries"
+    }
+  },
+  "paymentTypes": {
+    "cash": "Cash",
+    "bank": "Bank",
+    "uzum": "Uzum",
+    "click": "Click",
+    "payme": "Payme"
+  },
+  "smsTemplates": {
+    "reminder": "Payment Reminder",
+    "debtWarning": "Debt Warning",
+    "newMonth": "New Month Reminder"
+  },
+  "paymentModal": {
+    "editTitle": "Edit Payment",
+    "viewTitle": "Payment Details",
+    "amountRequired": "Please enter the amount",
+    "studentRequired": "Please select a student",
+    "paymentTypeLabel": "Payment Type *",
+    "paymentTypePlaceholder": "Select payment type",
+    "paymentTypeRequired": "Please select a payment type",
+    "currencyLabel": "Currency *",
+    "noteLabel": "Note",
+    "notePlaceholder": "Enter a note...",
+    "cancelBtn": "Cancel",
+    "saveBtn": "Save",
+    "createBtn": "Create",
+    "createTitle": "Create Payment",
+    "amountLabel": "Payment Amount",
+    "amountPlaceholder": "For example, 150000 or 25",
+    "currencyRequired": "Please select a currency",
+    "exchangeLabel": "Exchange Rate",
+    "studentLabel": "Select Student",
+    "studentPlaceholder": "Select a student",
+    "uploadLabel": "Upload Receipt (image)",
+    "uploadClick": "Click or drag file to upload",
+    "currencyOptions": {
+      "uzs": "So'm (UZS)",
+      "usd": "Dollar (USD)"
+    },
+    "paymentTypes": {
+      "cash": "Cash",
+      "bank": "Bank",
+      "click": "Click",
+      "uzum": "Uzum"
+    }
+  },
+  "tabs": {
+    "balance": "Balance",
+    "transfers": "Transfers"
+  },
+  "transfers": {
+    "column": {
+      "amount": "Transfer Amount"
+    },
+    "tooltip": {
+      "sendSms": "Send SMS"
+    }
+  }
+}
