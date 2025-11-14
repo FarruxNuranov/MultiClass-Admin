@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Modal, Form, Input, Button, Avatar, message, theme } from "antd";
 import { UploadOutlined, UserOutlined } from "@ant-design/icons";
-import { useThemeMode } from "../../hooks/useThemeMode";
+
 
 const ProfileEdit = ({
   editProfileOpen,
@@ -15,8 +15,8 @@ const ProfileEdit = ({
   profileUpdating = false,
 }) => {
   const { token } = theme.useToken();
-  const { mode } = useThemeMode();
-  const isDark = mode === "dark";
+
+
 
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
@@ -161,7 +161,7 @@ const ProfileEdit = ({
                   src={avatarSrc}
                   icon={<UserOutlined />}
                   style={{
-                    background: isDark ? "#1E1E1E" : "#D9D9D9",
+                    background: "#D9D9D9",
                     color: token.colorTextSecondary,
                     opacity: profileUpdating ? 0.6 : 1,
                   }}

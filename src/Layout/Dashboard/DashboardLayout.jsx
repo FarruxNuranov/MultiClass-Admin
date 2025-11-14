@@ -10,7 +10,7 @@ import Sidebar from "../../Components/Sidebar/Sidebar";
 const DashboardLayout = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const location = useLocation();
-  const showFullscreen = location.pathname === "/home/dashboard";
+  const showFullscreen = location.pathname === "/home";
 
   // 🔹 Переключатель полноэкранного режима
   const toggleFullscreen = () => {
