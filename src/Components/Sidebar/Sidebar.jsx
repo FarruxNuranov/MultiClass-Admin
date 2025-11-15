@@ -112,9 +112,7 @@ const Sidebar = () => {
  
 
   const renderNavLink = (link) => {
-    const isActive =
-      location.pathname === link.to ||
-      location.pathname.startsWith(link.to + "/");
+    const isActive = location.pathname === link.to;
 
     return (
       <NavLink

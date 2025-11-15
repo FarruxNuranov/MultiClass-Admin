@@ -2,36 +2,34 @@ import { authorizedFetch } from "../../../utils/authorizedFetch";
 
 const BASE_URL = `/auth`;
 
-export async function loginUserApi({ phone, password, role }) {
+export async function loginUserApi({ phone, password }) {
   try {
-    // authorizedFetch avtomatik ravishda tokenni tekshiradi va JSON qaytaradi
-    const data = await authorizedFetch(`${BASE_URL}/login`, {
+    const response = await authorizedFetch(`${BASE_URL}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ phone, password, role }),
+      body: JSON.stringify({ phone, password }),
     });
 
-
-    if (data?.data?.requiresRoleSelection) {
+    // Tokenni data.data.token ichidan olish kerak
+    if (response?.data?.token) {
       return {
-        type: "roleSelection",
-        accounts: data?.data?.accounts || [],
+        type: "singleAccount",
+        token: response.data.token,
       };
     }
 
-    if (data?.data?.user && data?.data?.token) {
+    // Agar kelajakda role selection qo‘shilsa
+    if (response?.data?.requiresRoleSelection) {
       return {
-        type: "singleAccount",
-        user: data.data.user,
-        token: data.data.token,
+        type: "roleSelection",
       };
     }
 
     throw new Error("Noto‘g‘ri javob formati qaytdi");
   } catch (err) {
     console.error("❌ loginUserApi error:", err);
-    throw new Error(err.message || "No response from server.");
+    throw new Error(err.message || "Server javob bermadi.");
   }
 }

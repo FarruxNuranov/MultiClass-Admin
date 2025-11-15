@@ -40,11 +40,6 @@
     }
   }
 
-  .profileCard {
-    justify-content: center;
-    background: transparent;
-    padding: 12px 0;
-  }
 }
 
 .top {
@@ -115,10 +110,14 @@
   align-items: center;
   gap: 10px;
   padding: 12px;
+  cursor: pointer;
   border-radius: 8px;
   background: var(--colors-background-bg-secondary-alt);
+  border-top: 1px solid var(--colors-border-border-secondary);
   transition: all 0.3s ease;
 }
+
+
 
 // .avatar {
 //   width: 36px;
@@ -196,14 +195,6 @@
   position: relative;
 }
 
-.profileCard {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px;
-  cursor: pointer;
-  border-top: 1px solid var(--colors-border-border-secondary);
-}
 
 .profileMenu {
   position: absolute;
